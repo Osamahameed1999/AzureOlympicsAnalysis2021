@@ -1,1 +1,0 @@
-This folder contains the 'Tokyo Olympics 2021' dataset.
