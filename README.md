@@ -3,6 +3,7 @@
 ## 📖 Project Overview  
 This project demonstrates an **end-to-end ETL pipeline** built using Microsoft Azure services to process and analyze the Tokyo 2021 Olympics dataset. The primary goal is to gain hands-on experience with Azure tools by integrating services for data ingestion, storage, transformation, and visualization. While the project is a learning exercise, it provides a foundational framework for scalable and efficient data operations.
 
+![Architecture Diagram](screenshots/project_architecture_diagram.png)
 ---
 
 ## 📊 Dataset  
@@ -45,15 +46,29 @@ The dataset consists of five CSV files related to the Tokyo 2021 Olympics:
    - Raw data was copied from a GitHub repository using ADF pipelines.  
    - Data was stored in the `raw-data` folder in ADLS Gen2.
 
+![copy_data](screenshots/azure_df.png)
+
+![raw-data](screenshots/adls_raw_data.png)
+
 2. **Data Transformation**  
    - Data was processed in Azure Databricks using PySpark:  
      - Loaded CSV files into DataFrames.  
      - Performed schema validation and cleaned missing values.  
      - Transformed data was written to the `transformed-data` folder in ADLS Gen2.
 
+![data-transformation](screenshots/azure_databricks_2.png)
+
+![data-transformation](screenshots/azure_databricks_3.png)
+
+![data-transformation](screenshots/azure_databricks_4.png)
+
+![data-transformation](screenshots/adls_transformed_data.png)
+
 3. **Data Warehousing**  
    - Transformed data was linked to Azure Synapse Analytics.  
    - Tables were created in a SQL pool for querying and analysis.
+     
+![data-warehousing](screenshots/azure_synapse_3.png)
 
 4. **Visualization (In Progress)**  
    - Power BI integration was initiated for interactive dashboard creation.  
